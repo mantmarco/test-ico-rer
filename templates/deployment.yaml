@@ -23,7 +23,7 @@ spec:
             - mkdir /rer_app;
               cd rer_app/;
               git init;
-              git remote add origin https://github.com/mantmarco/test-ico-rer.git;
+              git remote add origin https://github.com/mantmarco/test-ico-rer-python.git;
               git branch -M main;
               git pull origin main;
               python3 test_api.py;
