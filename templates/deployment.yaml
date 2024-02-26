@@ -18,5 +18,7 @@ spec:
         - name: test-api1-rer-sanita-laemur
           image: python:3
           imagePullPolicy: IfNotPresent
+          command: ["/bin/bash"]
+          workingDir: "/"
           ports:
             - containerPort: 8080
