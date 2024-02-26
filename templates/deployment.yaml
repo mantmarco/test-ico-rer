@@ -26,8 +26,9 @@ spec:
               git remote add origin https://github.com/mantmarco/test-ico-rer-python.git;
               git branch -M main;
               git pull origin main;
-              python3 test_api.py;
-              tail -f /dev/null;
+              pip install uvicorn;
+              pip install fastapi;
+              uvicorn test_api:app --reload;
           workingDir: "/"
           ports:
-            - containerPort: 8080
+            - containerPort: 8000
