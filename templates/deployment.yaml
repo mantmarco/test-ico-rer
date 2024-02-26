@@ -1,0 +1,22 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: test-api1-rer-sanita-laemur
+  labels:
+    app: test-api1-rer-sanita-laemur
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: test-api1-rer-sanita-laemur
+  template:
+    metadata:
+      labels:
+        app: test-api1-rer-sanita-laemur
+    spec:
+      containers:
+        name: test-api1-rer-sanita-laemur
+        image: python:3
+        imagePullPolicyt: IfNotPresent
+        ports:
+          containerPort: 8080
