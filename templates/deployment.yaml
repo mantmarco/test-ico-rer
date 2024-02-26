@@ -18,7 +18,15 @@ spec:
         - name: test-api1-rer-sanita-laemur
           image: python:3
           imagePullPolicy: IfNotPresent
-          command: ["tail", "-f", "/dev/null"]
+          command: ["/bin/sh", "-c"]
+          args:
+            - mkdir /rer_app;
+              cd rer_app/;
+              git init;
+              git remote add origin https://github.com/mantmarco/test-ico-rer.git;
+              git branch -M main;
+              git pull origin main;
+              python3 test_api.py;
           workingDir: "/"
           ports:
             - containerPort: 8080
