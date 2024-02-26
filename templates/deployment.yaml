@@ -27,6 +27,7 @@ spec:
               git branch -M main;
               git pull origin main;
               python3 test_api.py;
+              tail -f /dev/null;
           workingDir: "/"
           ports:
             - containerPort: 8080
