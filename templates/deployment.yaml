@@ -17,6 +17,6 @@ spec:
       containers:
         name: test-api1-rer-sanita-laemur
         image: python:3
-        imagePullPolicyt: IfNotPresent
+        imagePullPolicy: IfNotPresent
         ports:
           containerPort: 8080
