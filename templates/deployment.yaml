@@ -28,7 +28,7 @@ spec:
               git pull origin main;
               pip install uvicorn;
               pip install fastapi;
-              uvicorn test_api:app --reload;
+              uvicorn test_api:app --host 0.0.0.0 --port 8000 --reload;
           workingDir: "/"
           ports:
             - containerPort: 8000
